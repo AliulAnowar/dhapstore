@@ -1,0 +1,200 @@
+import os
+from weasyprint import HTML
+
+html_content = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cover Letter - Aliul Anowar</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 14mm 16mm 14mm 16mm;
+            background-color: #ffffff;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #2c3e50;
+            line-height: 1.42;
+            font-size: 9.8pt;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            border-bottom: 2px solid #1b4965;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+        }
+
+        .name {
+            font-size: 18pt;
+            font-weight: bold;
+            color: #1b4965;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin: 0 0 3px 0;
+        }
+
+        .title-sub {
+            font-size: 10.5pt;
+            font-weight: 600;
+            color: #62b6cb;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0 0 6px 0;
+        }
+
+        .contact-info {
+            font-size: 8.8pt;
+            color: #555555;
+            margin: 0;
+        }
+
+        .contact-info span {
+            margin-right: 10px;
+        }
+
+        .date-recipient {
+            margin-bottom: 12px;
+            font-size: 9.5pt;
+        }
+
+        .date {
+            font-weight: 600;
+            color: #1b4965;
+            margin-bottom: 8px;
+        }
+
+        .recipient-title {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .salutation {
+            font-weight: bold;
+            font-size: 10pt;
+            margin-bottom: 8px;
+            color: #1b4965;
+        }
+
+        p {
+            margin: 0 0 8px 0;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background-color: #f4f8fa;
+            border-left: 3.5px solid #1b4965;
+            padding: 8px 10px;
+            margin: 10px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .highlight-box h4 {
+            margin: 0 0 4px 0;
+            font-size: 9.5pt;
+            color: #1b4965;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .highlight-box ul {
+            margin: 0;
+            padding-left: 15px;
+        }
+
+        .highlight-box li {
+            margin-bottom: 4px;
+            font-size: 9.3pt;
+        }
+
+        .highlight-box li:last-child {
+            margin-bottom: 0;
+        }
+
+        .bold {
+            font-weight: bold;
+            color: #1b4965;
+        }
+
+        .signature {
+            margin-top: 12px;
+        }
+
+        .signature-name {
+            font-weight: bold;
+            color: #1b4965;
+            font-size: 10pt;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="name">Aliul Anowar</div>
+        <div class="title-sub">Monitoring & MIS Specialist | Software & Automated Data Pipeline Developer</div>
+        <div class="contact-info">
+            <span>📍 Dhaka / Rangpur, Bangladesh</span> | 
+            <span>📞 +8801812987361</span> | 
+            <span>✉️ aliulanowar@gmail.com</span> | 
+            <span>💻 GitHub: github.com/AliulAnowar</span>
+        </div>
+    </div>
+
+    <div class="date-recipient">
+        <div class="date">July 30, 2026</div>
+        <div class="recipient-title">To the Hiring Committee / Selection Board</div>
+        <div>Monitoring Manager Recruitment Team</div>
+    </div>
+
+    <div class="salutation">Dear Hiring Team,</div>
+
+    <p>
+        I am writing to express my enthusiastic interest in the <strong>Monitoring Manager</strong> position. With over <strong>15 years of dedicated experience</strong> designing robust M&E frameworks, directing field-level Data Quality Assurance (DQA), and architecting custom digital data pipelines across donor-funded programs (including UNDP and PKSF), I offer a rare dual expertise: proven operational leadership in field monitoring combined with full-stack capabilities to design and deploy modern M&E software applications.
+    </p>
+
+    <p>
+        My technical and operational background directly aligns with your requirements for end-to-end monitoring, field troubleshooting, and executive insight generation:
+    </p>
+
+    <div class="highlight-box">
+        <h4>Direct Alignment with Job Requirements & Technical Capabilities</h4>
+        <ul>
+            <li><span class="bold">End-to-End Monitoring & Field Operations:</span> Extensive experience establishing Indicator Tracking Tables (ITT), conducting on-ground hospital and community field verifications, troubleshooting data entry challenges, and leading multi-tier monitoring teams.</li>
+            <li><span class="bold">Data Quality Assurance (DQA) & SurveyCTO:</span> Proficient in configuring digital data collection systems (SurveyCTO, ODK, KoboToolbox), establishing strict automated data validation schemas, and managing clean research/monitoring relational databases (SQL, MySQL, PostgreSQL).</li>
+            <li><span class="bold">Dashboards & Insight Generation:</span> Skilled in leading visualization teams to build real-time interactive dashboards using Power BI, Python, and open-source stacks to deliver actionable operational insights to cross-functional leaders.</li>
+            <li><span class="bold">Custom Application & Tool Development:</span> Beyond managing off-the-shelf software, I actively design and build custom monitoring web/desktop apps and automated CI/CD data pipelines (Python/Pandas, Supabase, MySQL) to streamline offline-to-online field collection, grievance tracking (AAP/GRM), and real-time metric updates.</li>
+        </ul>
+    </div>
+
+    <p>
+        Whether evaluating operational metrics across hospital networks, resolving complex data pipeline bottlenecks, or mentoring field staff, my focus remains on ensuring data integrity and driving adaptive program management. I am eager to leverage both my M&E management background and software development skills to strengthen your organizational monitoring ecosystem.
+    </p>
+
+    <p>
+        Thank you for your time and consideration. I welcome the opportunity to discuss how my technical portfolio and field leadership experience align with your vision.
+    </p>
+
+    <div class="signature">
+        <div>Sincerely,</div>
+        <div class="signature-name">Aliul Anowar</div>
+    </div>
+
+</body>
+</html>
+"""
+
+# Save HTML file locally
+with open("Cover_Letter_Monitoring_Manager.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+# Render PDF file
+HTML("Cover_Letter_Monitoring_Manager.html").write_pdf("Cover_Letter_Monitoring_Manager.pdf")
+print("PDF generated successfully: Cover_Letter_Monitoring_Manager.pdf")
