@@ -10,7 +10,7 @@
 
 If you discover a security vulnerability within Dhapstore, please do not open a public issue. Instead, report it directly by contacting the project maintainer.
 
-* **Email:** [Your Contact Email]
+* **Email:** [aliulanowar@gmail.com]
 * **Response Time:** Security reports will be reviewed within 48 hours.
 
 Please include the following details in your report:
